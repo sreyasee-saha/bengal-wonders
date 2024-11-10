@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #be8989;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            height: 80%;
+            margin: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 90%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<center>
+<div class="container">
+    <h1>Contact Us</h1>
+   <p>We're here to assist you with any questions or inquiries you may have. Feel free to get in touch with us using the contact information below or by filling out the contact form.</p>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        
+        <div class="checkbox">
+            <input type="checkbox" id="privacyPolicy" required>
+            <label for="privacyPolicy">I accept the <a href="privacy policy.html">privacy policy.</a></label>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div></center>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (document.getElementById('privacyPolicy').checked) {
+            alert('Form submitted successfully!');
+            // You can add further processing here
+        } else {
+            alert('Please accept the privacy policy.');
+        }
+    });
+</script>
+
+</body>
+</html>
